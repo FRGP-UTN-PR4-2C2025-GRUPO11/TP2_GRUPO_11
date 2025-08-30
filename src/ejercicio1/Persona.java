@@ -31,6 +31,38 @@ public class Persona {
 		this.email = email;
 	}
 
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	public void setFechaNacimiento(LocalDate fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
+
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	public String getDni() {
 		return dni;
 	}
@@ -68,5 +100,15 @@ public class Persona {
 		return "Persona [DNI=" + getDni() + ", NOMBRE=" + getNombre() + ", APELLIDO=" + getApellido() + ", FECHA DE NACIMIENTO=" + getFechaNacimiento() + ", GENERO=" + getGenero()
 		    + ", DIRECCION=" + getDireccion() + ", TELEFONO=" + getTelefono() + ", EMAIL=" + getEmail() + "]";
 	}
+	
+	public static boolean verificarDNI(String DNI) throws ExVerificarDNI {
+		if(DNI.length() != 8) {
+			ExVerificarDNI obj = new ExVerificarDNI();
+			throw obj;
+			
+		}
+		return true;
+	}
 
 }
+
