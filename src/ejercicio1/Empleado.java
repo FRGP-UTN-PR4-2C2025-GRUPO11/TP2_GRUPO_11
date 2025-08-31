@@ -3,7 +3,7 @@ package ejercicio1;
 import java.time.LocalDate;
 
 /**
- * 
+ *
  */
 public class Empleado extends Persona {
 	private final int legajo;
@@ -77,9 +77,9 @@ public class Empleado extends Persona {
 			}
 		}
 	}
-	
 
-	
+
+
 	/**
 	 * Método abstracto que lista los empleados filtrados por palabra clave y los imprime en consola.
 	 * @param vEmpleados vector con el listado de empleados
@@ -94,11 +94,11 @@ public class Empleado extends Persona {
 		int contador = 1;
 		for (Empleado e : vEmpleados)
 		{
-			if ( ( e.getApellido() != null && e.getApellido().contains(palabraClave) ) || 
-					( e.getNombre() != null && e.getNombre().contains(palabraClave) ) || 
-					( e.getDireccion() != null && e.getDireccion().contains(palabraClave) ) || 
+			if ( ( e.getApellido() != null && e.getApellido().contains(palabraClave) ) ||
+					( e.getNombre() != null && e.getNombre().contains(palabraClave) ) ||
+					( e.getDireccion() != null && e.getDireccion().contains(palabraClave) ) ||
 					( e.getDni() != null && e.getDni().contains(palabraClave) ) ||
-					( e.getPuesto() != null && e.getPuesto().contains(palabraClave) ) 
+					( e.getPuesto() != null && e.getPuesto().contains(palabraClave) )
 				)
 			{
 				System.out.println(contador + ". " + e.toString());
