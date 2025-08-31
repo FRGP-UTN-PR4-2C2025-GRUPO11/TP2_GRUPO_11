@@ -5,7 +5,7 @@ import java.time.LocalDate;
 /**
  *
  */
-public class Empleado extends Persona {
+public class Empleado extends Persona implements Comparable<Empleado> {
 	private final int legajo;
 	private String puesto;
 	static int contador=999;
@@ -79,7 +79,6 @@ public class Empleado extends Persona {
 	}
 
 
-
 	/**
 	 * Método abstracto que lista los empleados filtrados por palabra clave y los imprime en consola.
 	 * @param vEmpleados vector con el listado de empleados
@@ -109,5 +108,16 @@ public class Empleado extends Persona {
 		System.out.println("Se encontraron " + contador + " resultados que coinciden con '" + palabraClave+ "'.");
 	}
 
+
+	@Override
+	public int compareTo(Empleado empleado) {
+		if (this.legajo < empleado.legajo) {
+			return -1; // this is "menor"
+		} else if (this.legajo > empleado.legajo) {
+			return 1; // this is "mayor"
+		}else {
+			return 0;
+		}
+	}
 
 }
