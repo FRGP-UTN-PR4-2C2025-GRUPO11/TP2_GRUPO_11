@@ -1,6 +1,7 @@
 package ejercicio1;
 
 import java.time.LocalDate;
+import java.util.*;
 
 public class Persona {
 	private String dni;
