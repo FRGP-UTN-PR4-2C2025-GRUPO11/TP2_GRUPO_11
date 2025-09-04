@@ -2,13 +2,21 @@ package ejercicio2;
 
 public class Polideportivo implements IEdificio{
 
-	private double superficie;
 	private double superficieEdificio;
 	String nombre;
 
 	
+	
+	
+	public Polideportivo(String nombre, double superficieEdificio) {
+		super();
+		this.nombre = nombre;
+		this.superficieEdificio = superficieEdificio;
+	}
+
+
 	public double getSuperficie() {
-		return superficie;
+		return superficieEdificio;
 	}
 
 
@@ -18,7 +26,7 @@ public class Polideportivo implements IEdificio{
 
 
 	public void setSuperficie(double superficie) {
-		this.superficie = superficie;
+		this.superficieEdificio = superficie;
 	}
 
 
@@ -36,5 +44,13 @@ public class Polideportivo implements IEdificio{
 	public double getSuperficieEdificio() {
 		return superficieEdificio;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Polideportivo " + nombre + ". Superficie= " + superficieEdificio + "m2";
+	}
+	
+	
 	
 }

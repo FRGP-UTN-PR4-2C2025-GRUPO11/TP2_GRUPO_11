@@ -4,7 +4,16 @@ import java.util.*;
 public class mainEjercicio2 {
 
 	public static void main(String[] args) {
-		ArrayList<IEdificio> grupo = new ArrayList<>();
+		ArrayList<IEdificio> grupo = new ArrayList<>(5);
+		grupo.add(new Polideportivo("Ejemplo1", 300));
+		grupo.add(new Polideportivo("Ejemplo2", 200));
+		grupo.add(new Polideportivo("Ejemplo3", 250));
+		grupo.add(new EdificioOficinas(100, 10));
+		grupo.add(new EdificioOficinas(200, 20));
+		Iterator<IEdificio> it = grupo.iterator();
+		while(it.hasNext()) {
+			IEdificio obj = it.next();
+			System.out.println(obj.toString());
+		}
 	}
-
 }
