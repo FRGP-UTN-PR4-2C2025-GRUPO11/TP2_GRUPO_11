@@ -101,16 +101,40 @@ public class Persona {
 		return "Persona [DNI=" + getDni() + ", NOMBRE=" + getNombre() + ", APELLIDO=" + getApellido() + ", FECHA DE NACIMIENTO=" + getFechaNacimiento() + ", GENERO=" + getGenero()
 		    + ", DIRECCION=" + getDireccion() + ", TELEFONO=" + getTelefono() + ", EMAIL=" + getEmail() + "]";
 	}
-	
-	public static boolean verificarDNI(String DNI) throws ExVerificarDNI {
-		if(DNI.length() != 8) {
-			ExVerificarDNI obj = new ExVerificarDNI();
-			throw obj;
-			
+		
+	public static boolean exVerificarDNI(String dni) throws ExVerificarDNI {
+		if (dni.length() != 8)
+		{
+			throw new ExVerificarDNI();
 		}
-		return true;
-	}
 
+		// Para verificar que son todos números, 2 maneras:
+
+		// Opción 1, con el método Character.isDigit():
+	    for (char c : dni.toCharArray()) {
+	        if (!Character.isDigit(c)) {
+	            throw new ExVerificarDNI();
+	        }
+	    }
+
+	    // Opción 2, usando la tabla ASCII y chequeando el valor decimal
+	    // que representa cada caracter del array:
+//		    for (char c : dni.toCharArray()) {
+//		        if ((int)c < 48 || (int)c > 57) {
+//		            throw new ExVerificarDNI();
+//		        }
+//		    }
+
+	    return true;
+}
+	
+	
+	
+	
+	
+	
+	
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(apellido, direccion, dni, email, fechaNacimiento, genero, nombre, telefono);

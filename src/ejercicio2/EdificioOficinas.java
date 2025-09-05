@@ -3,8 +3,10 @@ package ejercicio2;
 public class EdificioOficinas implements IEdificio{
 	private int cantidadOficinas;
 	private double superficie;
+	private String nombre;
 	
-	public EdificioOficinas(double superficie, int cantidadOficinas) {
+	public EdificioOficinas(String nombre, double superficie, int cantidadOficinas) {
+		this.nombre = nombre;
         this.superficie = superficie;
         this.cantidadOficinas = cantidadOficinas;
     }
