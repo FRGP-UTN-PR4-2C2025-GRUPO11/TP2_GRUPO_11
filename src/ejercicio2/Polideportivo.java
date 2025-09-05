@@ -48,7 +48,7 @@ public class Polideportivo implements IEdificio{
 
 	@Override
 	public String toString() {
-		return "Polideportivo " + nombre + ". Superficie= " + superficieEdificio + "m2";
+		return "Polideportivo " + nombre + ". Superficie= " + superficieEdificio + " m2";
 	}
 	
 	

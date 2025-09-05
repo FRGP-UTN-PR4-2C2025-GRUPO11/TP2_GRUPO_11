@@ -8,8 +8,8 @@ public class mainEjercicio2 {
 		grupo.add(new Polideportivo("Ejemplo1", 300));
 		grupo.add(new Polideportivo("Ejemplo2", 200));
 		grupo.add(new Polideportivo("Ejemplo3", 250));
-		grupo.add(new EdificioOficinas(100, 10));
-		grupo.add(new EdificioOficinas(200, 20));
+		grupo.add(new EdificioOficinas("Ejemplo4", 100, 10));
+		grupo.add(new EdificioOficinas("Ejemplo5", 200, 20));
 		Iterator<IEdificio> it = grupo.iterator();
 		while(it.hasNext()) {
 			IEdificio obj = it.next();
